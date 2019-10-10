@@ -7,17 +7,12 @@ def recipe_batches(recipe, ingredients):
         return 0
 
     for r in recipe:
-        #print(f"RECIPE: {r}")
         for i in ingredients:
-            #print(f"INGREDIENTS: {i}")
-            # if the ingrediants matching
             if r == i:
-                # calculate how many we have
                 if(recipe[r] <= ingredients[i]):
                     lot = ingredients[i] // recipe[r]
                     if lot < result or result == -1:
                         result = lot
-                # if we don't have enough ingredients for the recipe
                 else:
                     result = 0
                     break
