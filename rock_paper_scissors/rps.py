@@ -3,7 +3,17 @@
 import sys
 
 def rock_paper_scissors(n):
-  pass 
+  arr = []
+  moves = ['rock', 'paper', 'scissors']
+  if n <= 0:
+    return 0
+  if n >= 1:
+    for i in range(0, len(moves) - 1):
+      arr[i].append(moves[i])
+
+    rock_paper_scissors(n-1)
+  return arr
+
 
 
 if __name__ == "__main__":
